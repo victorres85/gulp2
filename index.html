@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".\src\vendor\bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src\vendor\bootstrap\css\bootstrap.min.css">
     <link rel="stylesheet" href=".\src\vendor\owl\css\owl.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -37,13 +37,13 @@
                                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Produtos</a>
+                                        <a class="nav-link" href="#carouselExampleControls">Produtos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Sobre nós</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link">Contato</a>
+                                        <a class="nav-link" href="#">Contato</a>
                                     </li>
                                 </ul>
                             </div>
@@ -77,6 +77,7 @@
             </button>
         </div>
     </header>
+    <div id="liveAlertPlaceholder"></div>
     <div class="box"></div>
     <div>
         <h3 style="margin-left: 20px;">Destaques</h3>
@@ -88,9 +89,9 @@
                 <h4>Poggio Civetta Chianti Classico DOCG</h4>
                 <h5>2019</h5>
                 <h6>R$ 227,00</h6>
-                <a href="single-product.html">
-                    Comprar
-                </a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chianti">
+                    Comprar </button>
+
             </div>
             <div class="featured-item">
                 <div class="imagem_vinho">
@@ -101,21 +102,23 @@
                     Château Malescot Saint-Exupéry</h4>
                 <h5>2010</h5>
                 <h6>R$ 2908,00</h6>
-                <a href="single-product.html" class="botao">
-                    Comprar
-                </a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Malescot">
+                    Comprar </button>
+
             </div>
             <div class="featured-item">
-                <img src=".\src\imagens\Pinot_Noir_Rose.png" alt="Garzón Estate Pinot Rosé de Corte"
-                    class="imagem_vinho">
+                <div class="imagem_vinho">
+                    <img src=".\src\imagens\Pinot_Noir_Rose.png" alt="Garzón Estate Pinot Rosé de Corte"
+                        class="imagem_vinho">
+                </div>
                 <h4>
                     Garzón Estate Pinot Rosé de Corte</h4>
 
                 <h5>2021</h5>
                 <h6>R$ 135,00</h6>
-                <a href="single-product.html">
-                    Comprar
-                </a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#garzon">
+                    Comprar </button>
+
             </div>
             <div class="featured-item">
                 <img src=".\src\imagens\Syrah.png" alt="Cono Sur 20 Barrels Limited Edition Syrah" class="imagem_vinho">
@@ -123,66 +126,220 @@
                     Cono Sur 20 Barrels Limited Edition Syrah</h4>
                 <h5>2017</h5>
                 <h6>R$ 289,00</h6>
-                <a href="single-product.html">
-                    Comprar
-                </a>
-            </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#conosur">
+                    Comprar </button>
+                <!-- Button trigger modal -->
 
+
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="container">
+
+
+
+        <!--  MODALS     -->
+        <div class="modal fade " id="chianti" tabindex="-1" role="dialog" aria-labelledby="modal-title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">
+                            Poggio Civetta Chianti Classico Riserva DOCG</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul>
+                                    <li class="infoVinho">Tipo</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul>
+                                    <li class="infoComplete">Tintos</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li class="infoVinho">Produtor</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul>
+                                    <li class="infoComplete">Tenute Rossetti</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li class="infoVinho">Região</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul>
+                                    <li class="infoComplete">Toscana</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li class="infoVinho">País</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul>
+                                    <li class="infoComplete">Itália</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li class="infoVinho">Uva</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul>
+                                    <li class="infoComplete">Sangiovese</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn btn-primary" data-bs-dismiss="modal">Fechar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  MODALS     -->
+        <div class="modal fade " id="Malescot" tabindex="-1" role="dialog" aria-labelledby="modal-title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Acabaram os estoques</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <p>Infelizmente todo nosso estoque deste vinho já foi tomado, mas se quiser pode nos deixar
+                                seu nome e email e te avisaremos assim que voltarem os estoques</p>
+                            <input type="text" class="form-control" id="recipient-name"
+                                placeholder="Digite aqui seu nome">
+                            <input type="email" class="form-control" id="recipient-name"
+                                placeholder="Digite aqui seu email">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" id="liveAlertBtn">submit
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--  MODALS     -->
+        <div class="modal fade " id="garzon" tabindex="-1" role="dialog" aria-labelledby="modal-title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Confirmar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <p>Tem certeza que, que quer adicionar este vinho ao seu carrinho? </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" id="noConfirmationBtn">
+                            Não
+                        </div>
+                        <div class="btn btn-success" data-bs-dismiss="modal" aria-label="Close" id="confirmationBtn">Sim
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--  MODALS     -->
+        <div class="modal fade " id="conosur" tabindex="-1" role="dialog" aria-labelledby="modal-title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Confirmar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <p>Tem certeza que, que quer adicionar este vinho ao seu carrinho? </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" id="noConfirmationBtn2">
+                            Não
+                        </div>
+                        <div class="btn btn-success" data-bs-dismiss="modal" aria-label="Close" id="confirmationBtn2">
+                            Sim
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center">
+                            <img src=".\src\imagens\logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-menu text-center">
+                            <ul>
+                                <li><a href="#">
+                                        HOME</a></li>
+                                <li><a href="#">HELP</a></li>
+                                <li><a href="#">PRIVACY</a></li>
+                                <li><a href="#">POLICY</a></li>
+                                <li><a href="#">HOW IT WORKS?</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="social-icons text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-footer" id="custom_footer">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="logo text-center">
-                        <img src=".\src\imagens\logo.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="footer-menu text-center">
-                        <ul>
-                            <li><a href="#">
-                                    HOME</a></li>
-                            <li><a href="#">HELP</a></li>
-                            <li><a href="#">PRIVACY</a></li>
-                            <li><a href="#">POLICY</a></li>
-                            <li><a href="#">HOW IT WORKS?</a></li>
-                            <li><a href="#">CONTACT US</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="col-md-12">
-                    <div class="social-icons text-center">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        </ul>
+                    <div class="container">
+                        <p class="text-center">WINEWORLD &COPY; TODOS OS DIREITOS RESERVADOS</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="sub-footer" id="custom_footer">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="container">
-                    <p class="text-center">WINEWORLD &COPY; TODOS OS DIREITOS RESERVADOS</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
-    <script src=".\src\js\jquery-3.6.0.min.js"></script>
-    <script src=".\src\vendor\bootstrap\js\bootstrap.min.js"></script>
-    <script src=".\src\vendor\owl\js\owl.js"></script>
-    <script src=".\src\js\custom.js"></script>
+
+
+
+        <script src=".\src\js\jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src=".\src\vendor\owl\js\owl.js"></script>
+        <script src=".\src\js\custom.js"></script>
 </body>
 
 </html>

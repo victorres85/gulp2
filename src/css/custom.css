@@ -27,8 +27,9 @@ header{
 .imagem_vinho{
     margin-top: 5px;
 } 
-div a{
+div button{
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 h4{
   height: 50px;
@@ -52,4 +53,15 @@ div img,h4,h5,h6,a{
 
 #custom_footer{
     border-top: 1px solid #8B006B;
+}
+div ul li{
+    display: flex;
+}
+.infoComplete{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+.infoVinho{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
 }
